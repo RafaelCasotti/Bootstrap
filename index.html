@@ -12,7 +12,7 @@
  <!-- Barra de Navegação -->
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="#"> Coqueiral-MG</a>
+        <a class="navbar-brand" href="#"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,7 +45,7 @@
 
     <!-- Carousel --> 
        
-        <div class="row d-flex justify-content-center" id="">
+        <div class="row d-flex justify-content-center" id="home">
             <div class="col-md-12 p-0 ">
                 <div>
                     <div id="carouselExampleCaptions" class="carousel slide"  data-ride="carousel">
@@ -94,29 +94,21 @@
 
        <!-- /Carousel -->
 
-        <!-- Videos -->
-        <div class="container">  
-      <div class="row mt-5 d-flex justiyf-content-center">
-        <div class="col-md-6 p-0 text-center">
-            <h4>Conheça mais a cidade: Vídeo 1</h4>
-            <iframe width="400" height="300" src="https://www.youtube.com/embed/SwhHJRiwuhQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-            
-            <div class="col-md-6 p-0 text-center">
-            <h4>Conheça mais a cidade: Vídeo 2</h4>
-             <iframe width="400" height="300" src="https://www.youtube.com/embed/Rhn1YhaWJWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        </div>
-
-       <!-- /Videos -->
-
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid" id="historia">
+  <div class="container">
+    <h1 class="display-4 text-center">História da Cidade</h1>
+    <p class="lead text-center">Terra dos Coqueiros.</p>
+  </div>
+</div>
+<!-- /Jumbotron -->
  <!-- Texto -->
-
-        <div class="row mt-5" id="historia">
+ <div class="container"> 
+        <div class="row " id="historia">
             <div class="col-md-12 p-0">
-                <h4 class="text-center m-5">História da Cidade</h4>
+              
                 <div>
 
-        <h5 class="text-center mb-3">Terra dos Coqueiros</h5> 
 <p>O primeiro nome dado à terra fundada pelo sertanista Matias Borges foi de Espírito Santo; hoje padroeiro da Igreja Matriz de Coqueiral; em 1792, há registros que o povoado também fora chamado de Espírito Santo dos Sertões, do Sapê e da Trombuca, conforme testifica a certidão de um batizado aqui feito por Pe. João Pereira de Carvalho. O nome Espírito Santo dos Coqueiros, originário, indiscutivelmente, da abundância de palmeiras encontradas nas densas matas locais, das quais ainda existem alguns exemplares, perdurou até 1923. Nesse ano, o distrito criado em 1846, por força da Lei volta a pertencer a Dores da Boa Esperança, município hoje de Boa Esperança, e passa a se chamar somente Coqueiral.</p>
 
 <p>Depois da criação do distrito de Paz, em 1846, Espírito Santo dos Coqueiros foi integrado ao território de Lavras, elevada à categoria de vila em 1831. Em 1868, o distrito foi incorporado à Vila das Dores de Boa Esperança, desmembrada do município de Três Pontas. Em 1902, passou a pertencer ao Município da Vila de Campos Gerais. Em 1923, volta a pertencer à Boa Esperança, sendo emancipado no dia 1 de janeiro de 1949. Judicialmente, porém, continua pertencer à Comarca de Boa Esperança.
@@ -136,7 +128,21 @@ Somente em julho e 1932, grande parte da população ficou conhecendo o rádio, 
 
  <!-- /Texto -->
 
- 
+  <!-- Videos -->
+  
+    <div class="row mt-5 d-flex ">
+      <div class="col-md-6 p-0 text-center">
+          <h4>Conheça mais a cidade: Vídeo 1</h4>
+          <iframe width="400" height="300" src="https://www.youtube.com/embed/SwhHJRiwuhQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+          
+          <div class="col-md-6 p-0 text-center">
+          <h4>Conheça mais a cidade: Vídeo 2</h4>
+           <iframe width="400" height="300" src="https://www.youtube.com/embed/Rhn1YhaWJWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+
+     <!-- /Videos -->
+
  <!-- Fotos -->
 
          <div class="row" id="fotos">
@@ -148,9 +154,8 @@ Somente em julho e 1932, grande parte da população ficou conhecendo o rádio, 
 </div> </div>
     
     <div class="row">
-    <div class="col-md-12 text-center">
+    <div class="col-md-12 text-center p-2">
     <img src="/asserts/imagens/praca 7 de setembro.jpg" width="600" height="450" alt="Fotos">
-
     </div>
     <div class="col-md-12 text-center p-2">
         <img src="/asserts/imagens/igreja matriz coq.jpg"  width="600" height="450" alt="Fotos">
@@ -211,18 +216,21 @@ Somente em julho e 1932, grande parte da população ficou conhecendo o rádio, 
                     <div class="col-md-6">
                     <form>
                             <div class="form-group">
-                              <label for="formGroupExampleInput">Nome Completo</label>
-                              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome">
+                              <label for="nome">Nome Completo</label>
+                              <input type="text" class="form-control" id="nome" placeholder="Nome" onkeyup="validaNome()">
                             </div>
+                            <div id="txtNome"> </div>
                             <div class="form-group">
-                              <label for="formGroupExampleInput2">E-mail</label>
-                              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="E-mail">
+                              <label for="email">E-mail</label>
+                              <input type="text" class="form-control" id="email" placeholder="E-mail" onkeyup="validaEmail()">
                             </div>
+                            <div id="txtEmail"> </div>
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Mensagem</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Mensagem" rows="3"></textarea>
+                                <label for="assunto">Mensagem</label>
+                                <textarea class="form-control" id="assunto" placeholder="Mensagem" rows="3" onkeyup="validaAssunto()"></textarea>
                               </div>
-                              <button type="submit" class="btn btn-primary">Enviar</button>
+                              <div id="txtAssunto"></div>
+                              <button type="submit" class="btn btn-primary" onclick="enviar()">Enviar</button>
                           </form>         
             
             </div>
@@ -260,5 +268,7 @@ Somente em julho e 1932, grande parte da população ficou conhecendo o rádio, 
  <!-- /Rodapé-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-</body>
+    <script src="./asserts/imagens/"></script>
+    <script src="./asserts/js/js.js"></script>
+  </body>
 </html>
