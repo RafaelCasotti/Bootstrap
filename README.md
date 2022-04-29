@@ -8,4 +8,5 @@
 ## :hammer: Tecnologias Utilizadas 
 - `HTML`
 - `CSS`
+- `Javascript`
 - `Framework Bootstrap`
